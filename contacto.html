@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="contenedor-header">
+        <div class="titulo">
+          <h1>La vida simple y sencilla</h1>
+          <p class="subtitulo">
+            Un blog que explora el minimalismo como estilo de vida
+          </p>
+        </div>
+        <button id="btn-hambur" class="abrir-nav">&#9776;</button>
+        <nav class="nav">
+          <button class="cerrar-nav">&times;</button>
+          <ul class="lista-nav">
+            <li>
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li><a class="nav-link" href="sobre-mi.html">Sobre mi</a></li>
+            <li>
+              <a class="pagina-actual nav-link" href="contacto.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="header-contacto">
+        <h2 class="titulo">Formulario de Contacto</h2>
+        <p class="subtitulo">Ponte en contacto conmigo</p>
+      </div>
+      <form id="formulario" class="form" method="GET">
+        <div class="formulario-flex">
+          <input
+            id="nombre"
+            type="text"
+            placeholder="Nombre"
+            maxlength="60"
+            required
+          />
+          <input
+            id="apellido"
+            type="text"
+            placeholder="Apellido"
+            maxlength="60"
+            required
+          />
+        </div>
+        <input
+          id="email"
+          type="email"
+          maxlength="60"
+          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+          placeholder="Ingrese su E-mail"
+        />
+        <textarea
+          id="mensaje"
+          maxlength="500"
+          placeholder="Escriba su mensaje. Máximo 500 caracteres."
+        ></textarea>
+        <button id="btn-formulario" type="submit" class="btn-form">
+          Enviar
+        </button>
+      </form>
+    </main>
+
+    <footer>
+      <p><strong>La vida simple y sencilla</strong></p>
+      <p>Copyright 2019</p>
+      <ul class="social-list">
+        <li id="youtube" class="social-item">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/user/blackboxfilmcompany"
+            class="social-link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </li>
+        <li id="twitter" class="social-item">
+          <a
+            target="_blank"
+            href="https://twitter.com/mattdavella?lang=es"
+            class="social-link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li id="instagram" class="social-item">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/mattdavella/?hl=es"
+            class="social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script type="text/javascript" src="./nav.js"></script>
+  <script type="text/javascript" src="./validacion.js"></script>
+  <script type="text/javascript" src="./animacion.js"></script>
+</html>

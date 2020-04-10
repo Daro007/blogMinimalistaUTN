@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-header">
+        <div class="titulo">
+          <h1>La vida simple y sencilla</h1>
+          <p class="subtitulo">
+            Un blog que explora el minimalismo como estilo de vida
+          </p>
+        </div>
+        <button id="btn-hambur" class="abrir-nav">&#9776;</button>
+        <nav class="nav">
+          <button class="cerrar-nav">&times;</button>
+          <ul class="lista-nav">
+            <li>
+              <a class="pagina-actual nav-link" href="index.html">Inicio</a>
+            </li>
+            <li><a class="nav-link" href="sobre-mi.html">Sobre mi</a></li>
+            <li><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="contenedor contenedor-flex">
+      <main class="main">
+        <article class="articulo-principal">
+          <h2 class="articulo-titulo">Minimalismo, el documental.</h2>
+
+          <video
+            id="video"
+            class="videoPrincipal"
+            src="./Videos/Minimalism_ A Documentary About the Important Things (Official Trailer).mp4"
+            poster="https://occ-0-33-37.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR7wShWnShS8TGmoT7pk6n6yORuasPprm2NHlu1VSlJtVdCM9A9q-eQs8CZX9vMhFbd0y9MXepX0TU_AzzXs5oToJHpA.jpg?r=644"
+          ></video>
+          <nav class="botonera">
+            <button class="btn-video" onclick="stop()">
+              <i class="fas fa-stop"></i>
+            </button>
+            <button class="btn-video" onclick="saltar(-5)">
+              <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="playPause" class="btn-video" onclick="reproducir()">
+              <i id="play" class="fas fa-play"></i
+              ><i id="off" class="fas fa-pause"> </i>
+            </button>
+            <button class="btn-video" onclick="saltar(5)">
+              <i class="fas fa-forward"></i>
+            </button>
+          </nav>
+          <p class="articulo-parrafo">
+            <strong>Lorem Ipsum is simply dummy text of the printing and</strong
+            >, Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+          <a href="#" class="articulo-footer">CONTINUA LEYENDO</a>
+        </article>
+
+        <article class="articulo-reciente">
+          <div class="articulo-reciente-principal">
+            <h2 class="articulo-titulo">Cocina simple</h2>
+            <p class="articulo-parrafo">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type.
+            </p>
+            <a href="#" class="articulo-footer">CONTINUA LEYENDO</a>
+          </div>
+          <div class="articulo-reciente-secundario">
+            <img
+              src="https://images.unsplash.com/photo-1487532195053-ae7d32261c6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt=""
+              class="articulo-imagen"
+            />
+            <p class="articulo-info">17 de julio, 2019 | 3 comentarios</p>
+          </div>
+        </article>
+
+        <article class="articulo-reciente">
+          <div class="articulo-reciente-principal">
+            <h2 class="articulo-titulo">Simplicidad y trabajo</h2>
+            <p class="articulo-parrafo">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type.
+            </p>
+            <a href="#" class="articulo-footer">CONTINUA LEYENDO</a>
+          </div>
+          <div class="articulo-reciente-secundario">
+            <img
+              src="https://images.unsplash.com/photo-1519332978332-21b7d621d05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt=""
+              class="articulo-imagen"
+            />
+            <p class="articulo-info">15 de julio, 2019 | 2 comentarios</p>
+          </div>
+        </article>
+
+        <article class="articulo-reciente">
+          <div class="articulo-reciente-principal">
+            <h2 class="articulo-titulo">La simplicidad y el arte</h2>
+            <p class="article-parrafo">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type.
+            </p>
+            <a href="#" class="articulo-footer">CONTINUA LEYENDO</a>
+          </div>
+          <div class="articulo-reciente-secundario">
+            <img
+              src="https://images.unsplash.com/photo-1499892477393-f675706cbe6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt=""
+              class="articulo-imagen"
+            />
+            <p class="articulo-info">10 de julio, 2019 | 6 comentarios</p>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <footer>
+      <p><strong>La vida simple y sencilla</strong></p>
+      <p>Copyright 2019</p>
+      <ul class="social-list">
+        <li id="youtube" class="social-item">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/user/blackboxfilmcompany"
+            class="social-link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </li>
+        <li id="twitter" class="social-item">
+          <a
+            target="_blank"
+            href="https://twitter.com/mattdavella?lang=es"
+            class="social-link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li id="instagram" class="social-item">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/mattdavella/?hl=es"
+            class="social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script type="text/javascript" src="./video.js"></script>
+  <script type="text/javascript" src="./nav.js"></script>
+  <script type="text/javascript" src="./animacion.js"></script>
+</html>
