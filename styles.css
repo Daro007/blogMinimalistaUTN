@@ -24,6 +24,16 @@ video {
   margin-bottom: 2em;
   border-radius: 5px;
 }
+.video-youtube {
+  text-align: center;
+}
+iframe {
+  border-radius: 5px;
+  max-width: 900px;
+  width: 100%;
+  min-height: 300px;
+  max-height: 900px;
+}
 
 /* =================
 Tipografia
@@ -367,6 +377,11 @@ footer {
     height: 400px;
     width: 400px;
   }
+  iframe {
+    width: 100%;
+    min-height: 500px;
+    max-height: 900px;
+  }
 }
 
 /* articulos */
@@ -454,4 +469,9 @@ footer {
 #canvas {
   width: 120px;
   height: 60px;
+}
+
+/* Alert webstorage */
+.confirmacion {
+  display: none;
 }

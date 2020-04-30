@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body onload="mostrar()">
+    <header>
+      <div class="contenedor-header">
+        <div class="titulo">
+          <h1>La vida simple y sencilla</h1>
+          <p class="subtitulo">
+            Un blog que explora el minimalismo como estilo de vida
+          </p>
+        </div>
+        <button id="btn-hambur" class="abrir-nav">&#9776;</button>
+        <nav class="nav">
+          <button class="cerrar-nav">&times;</button>
+          <ul class="lista-nav">
+            <li>
+              <a class="pagina-actual nav-link" href="index.html">Inicio</a>
+            </li>
+            <li><a class="nav-link" href="sobre-mi.html">Sobre mi</a></li>
+            <li><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="contenedor contenedor-flex">
+      <main class="main">
+        <article class="articulo-principal">
+          <h2 class="articulo-titulo">
+            Checklist, la última herramienta de la productividad.
+          </h2>
+          <div class="video-youtube">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/8n2vL2I__WY"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="articulo-parrafo">
+            <strong>Lorem Ipsum is simply dummy text of the printing and</strong
+            >, Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </article>
+        <article class="articulo-principal">
+          <h2 class="articulo-titulo">
+            Crea tu propia checklist
+          </h2>
+          <p class="subtitulo">
+            Escribe una tarea y presiona "enter" para escribir la siguiente.
+          </p>
+          <br />
+          <div
+            id="alert"
+            class="alert alert-success alert-dismissible fade show confirmacion"
+            role="alert"
+          >
+            <h4 class="alert-heading">Checklist</h4>
+            <p>Tus tareas se han guardado exitosamente.</p>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <ul id="checklist" contenteditable="">
+            <li>Escribe tu checklist aqui.</li>
+          </ul>
+        </article>
+        <button onclick="guardar()" class="btn-form">Guardar</button>
+        <button onclick="borrar()" class="btn-form">Borrar</button>
+      </main>
+    </div>
+
+    <footer>
+      <p><strong>La vida simple y sencilla</strong></p>
+      <p>Copyright 2019</p>
+      <ul class="social-list">
+        <li id="youtube" class="social-item">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/user/blackboxfilmcompany"
+            class="social-link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </li>
+        <li id="twitter" class="social-item">
+          <a
+            target="_blank"
+            href="https://twitter.com/mattdavella?lang=es"
+            class="social-link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li id="instagram" class="social-item">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/mattdavella/?hl=es"
+            class="social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script type="text/javascript" src="./video.js"></script>
+  <script type="text/javascript" src="./nav.js"></script>
+  <script type="text/javascript" src="./animacion.js"></script>
+  <script type="text/javascript" src="./webstorage.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+</html>
