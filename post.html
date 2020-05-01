@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
-  <body onload="mostrar()">
+  <body>
     <header>
       <div class="contenedor-header">
         <div class="titulo">
@@ -73,9 +73,7 @@
           <h2 class="articulo-titulo">
             Crea tu propia checklist
           </h2>
-          <p class="subtitulo">
-            Escribe una tarea y presiona "enter" para escribir la siguiente.
-          </p>
+
           <br />
           <div
             id="alert"
@@ -93,11 +91,37 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <ul id="checklist" contenteditable="">
-            <li>Escribe tu checklist aqui.</li>
-          </ul>
+          <p class="subtitulo">
+            Escribe un título para tu checklist.
+          </p>
+          <input
+            id="tituloChecklist"
+            type="text"
+            placeholder="Escribe un título"
+          />
+          <p class="subtitulo">
+            Escribe una tarea.
+          </p>
+          <input id="check" placeholder="Escriba una tarea">
+            
+        </input>
+          <p class="subtitulo">
+            Selecciona una fecha limite para terminar tu checklist.
+          </p>
+          <input type="date" id="fecha" />
+          <p class="subtitulo">
+            Indica el grado de urgencia que tiene para ti terminar las tareas de
+            tu checklist.
+          </p>
+          <select id="urgencia">
+            <option>Muy urgente</option>
+            <option>Urgente</option>
+            <option>Poco urgente</option>
+          </select>
+          <br/>
+          <div class="mostrarChecklist" id="caja"></div>
         </article>
-        <button onclick="guardar()" class="btn-form">Guardar</button>
+        <button id="guardar" class="btn-form">Guardar</button>
         <button onclick="borrar()" class="btn-form">Borrar</button>
       </main>
     </div>
