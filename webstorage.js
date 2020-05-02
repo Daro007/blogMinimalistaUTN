@@ -1,7 +1,7 @@
 function base() {
   const btnGuardar = document.getElementById("guardar");
   btnGuardar.addEventListener("click", nuevoItem, false);
-
+  console.log(caja.textContent);
   mostrarItem();
 }
 
@@ -39,9 +39,7 @@ function nuevoItem() {
       "</p>",
   ];
   localStorage.setItem(titulo, valores);
-  const alert = document.getElementById("alert");
-  alert.classList.remove("confirmacion");
-  // console.log(checklist);
+
   mostrarItem();
 }
 
@@ -51,9 +49,19 @@ function mostrarItem() {
   for (let i = 0; i < localStorage.length; i++) {
     var id = localStorage.key(i);
     var valor = localStorage.getItem(id);
-
-    caja.innerHTML +=
-      "<p class='subtitulo fuentePost tarea'>" + id + "</p><br/>" + valor;
+    if (localStorage.length > 1) {
+      console.log("solo puedes tener una checklist");
+      const alert2 = document.getElementById("alert2");
+      alert2.classList.remove("confirmacion");
+      caja.innerHTML =
+        "<p class='subtitulo fuentePost tarea'>" + id + "</p><br/>" + valor;
+    } else {
+      caja.innerHTML +=
+        "<p class='subtitulo fuentePost tarea'>" + id + "</p><br/>" + valor;
+      const alert = document.getElementById("alert");
+      alert.classList.remove("confirmacion");
+    }
+    console.log(caja.textContent);
   }
 }
 

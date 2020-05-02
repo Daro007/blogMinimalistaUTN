@@ -115,7 +115,7 @@
             <option>Poco urgente</option>
           </select>
           <br/>
-          <div class="mostrarChecklist" id="caja"> 
+           
             <h2 class='articulo-titulo'>Tu Checklist</h2><br />
             <div id="alert" class="alert alert-success alert-dismissible fade show confirmacion" role="alert">
               <h4 class="alert-heading">Checklist</h4>
@@ -123,11 +123,20 @@
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
+            </div><div id="alert2" class="alert alert-warning alert-dismissible fade show confirmacion" role="alert">
+              <h4 class="alert-heading">Checklist</h4>
+              <p>Lo sentimos. Sólo puedes tener una checklist.<br/>
+              Para crear una nueva haz click en "Borrar", luego escribe tu nueva checklist y guardala.
+              </p>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            <div class="mostrarChecklist" id="caja">
           </div>
         </article>
         <button id="guardar" class="btn-form">Guardar</button>
-        <button onclick="borrar()" class="btn-form">Borrar checklist</button>
+        <button onclick="borrar()" class="btn-form">Borrar</button>
       </main>
     </div>
 
