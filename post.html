@@ -75,42 +75,38 @@
           </h2>
 
           <br />
-          <div
-            id="alert"
-            class="alert alert-success alert-dismissible fade show confirmacion"
-            role="alert"
-          >
-            <h4 class="alert-heading">Checklist</h4>
-            <p>Tus tareas se han guardado exitosamente.</p>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="alert"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <p class="subtitulo">
-            Escribe un título para tu checklist.
+          
+          <p class="subtitulo fuentePost">
+            Escribe un título para tu lista de tareas.
           </p>
-          <input
+          <input 
+            class="inputChecklist"
             id="tituloChecklist"
             type="text"
             placeholder="Escribe un título"
           />
-          <p class="subtitulo">
-            Escribe una tarea.
+          <p class="subtitulo fuentePost">
+            Escribe tus 5 tareas más importantes.
           </p>
-          <input id="check" placeholder="Escriba una tarea">
+          <input 
+          class="inputChecklist"
+           id="check0" 
+           placeholder="Tarea 1">
+          <input class="inputChecklist" id="check1" placeholder="Tarea 2">
+          <input class="inputChecklist" id="check2" placeholder="Tarea 3">
+          <input class="inputChecklist" id="check3" placeholder="Tarea 4">
+          <input class="inputChecklist" id="check4" placeholder="Tarea 5">
             
         </input>
-          <p class="subtitulo">
+          <p class="subtitulo fuentePost">
             Selecciona una fecha limite para terminar tu checklist.
           </p>
-          <input type="date" id="fecha" />
-          <p class="subtitulo">
-            Indica el grado de urgencia que tiene para ti terminar las tareas de
+          <input 
+          class="inputChecklist"
+          type="date" 
+          id="fecha" />
+          <p class="subtitulo fuentePost">
+            Indica el grado de urgencia que tiene para ti terminar esa tarea de
             tu checklist.
           </p>
           <select id="urgencia">
@@ -119,10 +115,19 @@
             <option>Poco urgente</option>
           </select>
           <br/>
-          <div class="mostrarChecklist" id="caja"></div>
+          <div class="mostrarChecklist" id="caja"> 
+            <h2 class='articulo-titulo'>Tu Checklist</h2><br />
+            <div id="alert" class="alert alert-success alert-dismissible fade show confirmacion" role="alert">
+              <h4 class="alert-heading">Checklist</h4>
+              <p>Tus tareas se han guardado exitosamente.</p>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
         </article>
         <button id="guardar" class="btn-form">Guardar</button>
-        <button onclick="borrar()" class="btn-form">Borrar</button>
+        <button onclick="borrar()" class="btn-form">Borrar checklist</button>
       </main>
     </div>
 

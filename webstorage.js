@@ -1,36 +1,47 @@
-// const item = document.getElementById("checklist");
-// const alert = document.getElementById("alert");
-
-// function guardar() {
-//   localStorage.setItem("checklistUsuario", item.innerHTML);
-//   alert.classList.remove("confirmacion");
-// }
-// function borrar() {
-//   localStorage.clear();
-//   location.reload();
-// }
-
-// function mostrar() {
-//   if (localStorage.getItem("checklistUsuario")) {
-//     item.innerHTML = localStorage.getItem("checklistUsuario");
-//   }
-// }
-
 function base() {
   const btnGuardar = document.getElementById("guardar");
   btnGuardar.addEventListener("click", nuevoItem, false);
+
   mostrarItem();
 }
 
 function nuevoItem() {
   const titulo = document.getElementById("tituloChecklist").value;
-  const checklist = document.getElementById("check").value;
+  const checklist0 = document.getElementById("check0").value;
+  const checklist1 = document.getElementById("check1").value;
+  const checklist2 = document.getElementById("check2").value;
+  const checklist3 = document.getElementById("check3").value;
+  const checklist4 = document.getElementById("check4").value;
   const urgencia = document.getElementById("urgencia").value;
   const fecha = document.getElementById("fecha").value;
 
-  const valores = [checklist, urgencia, fecha];
+  const valores = [
+    "<li class='tarea'>" +
+      checklist0 +
+      "</li>" +
+      "<li class='tarea'>" +
+      checklist1 +
+      "</li>" +
+      "<li class='tarea'>" +
+      checklist2 +
+      "</li>" +
+      "<li class='tarea'>" +
+      checklist3 +
+      "</li>" +
+      "<li class='tarea'>" +
+      checklist4 +
+      "</li>" +
+      "<p class='tarea'>Grado de urgencia: " +
+      urgencia +
+      "</p>" +
+      "<p class='tarea'>Fecha limite: " +
+      fecha +
+      "</p>",
+  ];
   localStorage.setItem(titulo, valores);
-  console.log(checklist);
+  const alert = document.getElementById("alert");
+  alert.classList.remove("confirmacion");
+  // console.log(checklist);
   mostrarItem();
 }
 
@@ -41,7 +52,8 @@ function mostrarItem() {
     var id = localStorage.key(i);
     var valor = localStorage.getItem(id);
 
-    caja.innerHTML += "<ul><li>" + id + " - " + valor + "</li></ul>";
+    caja.innerHTML +=
+      "<p class='subtitulo fuentePost tarea'>" + id + "</p><br/>" + valor;
   }
 }
 

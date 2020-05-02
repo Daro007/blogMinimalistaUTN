@@ -80,6 +80,15 @@ strong {
   font-size: 0.75rem;
   margin: 0;
 }
+.fuentePost {
+  font-size: 1rem;
+}
+.tarea {
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
 
 /* =================
 Layout con Flexbox
@@ -123,7 +132,7 @@ input {
   outline: none;
 }
 
-input {
+.inputContacto {
   width: 94%;
   font-family: inherit;
   margin: 1em;
@@ -133,8 +142,16 @@ input {
   transition: transform 250ms;
   border: 1px solid grey;
 }
-input:focus {
+.inputContacto:focus {
   transform: scale(1.1);
+}
+.inputChecklist,
+select {
+  font-family: inherit;
+  margin: 1em;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 0.5em;
 }
 
 textarea {
@@ -152,7 +169,7 @@ textarea {
 .btn-form {
   background-color: #143774;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.5em 1em;
   color: #ffffff;
   border-radius: 5px;
@@ -381,6 +398,9 @@ footer {
     width: 100%;
     min-height: 500px;
     max-height: 900px;
+  }
+  .btn-form {
+    font-size: 1.25rem;
   }
 }
 
